@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 //stateless widget
 class App extends StatelessWidget {
@@ -9,6 +7,6 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // material app
-    return MaterialApp();
+    return const MaterialApp();
   }
 }
