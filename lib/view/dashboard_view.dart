@@ -11,10 +11,12 @@ class _DashboardViewState extends State<DashboardView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      //scaffold created
       child: Scaffold(
+        //appbar created
         appBar: AppBar(
           title: const Text('Dashboard'),
-          centerTitle: true,
+          centerTitle: true, // Text alligned at center.
         ),
       ),
     );
