@@ -4,5 +4,6 @@ import 'package:num_generator/app.dart';
 
 //main method
 void main() {
-  runApp(App());
+  // App() called from app.dart
+  runApp(const App());
 }
