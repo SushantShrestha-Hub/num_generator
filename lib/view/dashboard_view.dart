@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});
@@ -15,7 +13,8 @@ class _DashboardViewState extends State<DashboardView> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Dashboard'),
+          title: const Text('Dashboard'),
+          centerTitle: true,
         ),
       ),
     );
