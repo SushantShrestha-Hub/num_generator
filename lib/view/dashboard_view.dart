@@ -13,12 +13,24 @@ class _DashboardViewState extends State<DashboardView> {
     return SafeArea(
       //scaffold created
       child: Scaffold(
-        //appbar created
-        appBar: AppBar(
-          title: const Text('Dashboard'),
-          centerTitle: true, // Text alligned at center.
-        ),
-      ),
+          //appbar created
+          appBar: AppBar(
+            title: const Text('Dashboard'),
+            centerTitle: true, // Text alligned at center.
+            elevation: 0,
+          ),
+          body: Column(
+            children: [
+              Row(
+                children: const [
+                  SizedBox(
+                    width: double.infinity,
+                  ),
+                  SizedBox(),
+                ],
+              ),
+            ],
+          )),
     );
   }
 }
