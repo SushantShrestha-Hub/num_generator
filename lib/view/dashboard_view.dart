@@ -39,7 +39,19 @@ class _DashboardViewState extends State<DashboardView> {
                   ),
                 ),
               ],
-            )
+            ),
+            const Spacer(),
+            const Text('Correct Answer: 0'),
+            const Text('InCorrect Answer: 0'),
+            const Text('Attempts: 0'),
+            const Spacer(),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {});
+              },
+              child: const Text('Restart'),
+            ),
+            const Spacer()
           ],
         ),
       ),
