@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'view/app_view.dart';
 
+import 'view/dashboard_view.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,14 +8,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-
       routes: {
-        '/' : (context) => const AppView(),                  // context (source) => destination
-        },
+        '/': (context) =>
+            const DashboardView(), // context (source) => destination
+      },
     );
   }
 }
