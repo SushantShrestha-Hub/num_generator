@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'app.dart';
 
+import 'dashboard.dart';
 
-
-void main(){
-
+void main() {
   runApp(
     const App(),
   );
