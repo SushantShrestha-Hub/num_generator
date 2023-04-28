@@ -52,63 +52,65 @@ class _AppViewState extends State<DashboardView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Greater number game"),
-        centerTitle: true,
-        elevation: 0,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          const Spacer(),
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            ElevatedButton(
-              onPressed: () {
-                checkAnswer(num1: num1, num2: num2);
-              },
-              child: RichText(
-                text: TextSpan(
-                  text: '$num1',
-                  style: const TextStyle(
-                    fontSize: 40,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Greater number game"),
+          centerTitle: true,
+          elevation: 0,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            const Spacer(),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              ElevatedButton(
+                onPressed: () {
+                  checkAnswer(num1: num1, num2: num2);
+                },
+                child: RichText(
+                  text: TextSpan(
+                    text: '$num1',
+                    style: const TextStyle(
+                      fontSize: 40,
+                    ),
                   ),
                 ),
               ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                checkAnswer(num1: num2, num2: num1);
-              },
-              child: RichText(
-                text: TextSpan(
-                  text: '$num2',
-                  style: const TextStyle(
-                    fontSize: 40,
+              ElevatedButton(
+                onPressed: () {
+                  checkAnswer(num1: num2, num2: num1);
+                },
+                child: RichText(
+                  text: TextSpan(
+                    text: '$num2',
+                    style: const TextStyle(
+                      fontSize: 40,
+                    ),
                   ),
                 ),
               ),
+            ]),
+            const Spacer(),
+            RichText(
+              text: const TextSpan(
+                text: 'Result:',
+                style: TextStyle(),
+              ),
             ),
+            Text("Correct Answers: $correctAnswer"),
+            Text("Incorrect Answers: $wrongAnswer"),
+            Text("Total Attempt: $counter"),
+            const Spacer(),
+            ElevatedButton(
+              onPressed: () {
+                restartGame();
+              },
+              child: const Text('Restart'),
+            ),
+            const Spacer(),
           ]),
-          const Spacer(),
-          RichText(
-            text: const TextSpan(
-              text: 'Result:',
-              style: TextStyle(),
-            ),
-          ),
-          Text("Correct Answers: $correctAnswer"),
-          Text("Incorrect Answers: $wrongAnswer"),
-          Text("Total Attempt: $counter"),
-          const Spacer(),
-          ElevatedButton(
-            onPressed: () {
-              restartGame();
-            },
-            child: const Text('Restart'),
-          ),
-          const Spacer(),
-        ]),
+        ),
       ),
     );
   }
